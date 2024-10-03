@@ -1,0 +1,227 @@
+*
+    
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    
+
+}
+section {
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(istockphoto-1291606550-1024x1024.jpg)no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: animatebg 5s linear infinite;
+    
+}
+@keyframes animatebg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+div.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+    border: 8px solid green;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    
+}
+h2{
+    font: size 5em; 
+    text-align: center;
+    color: white;
+}
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+
+}
+.input-box label{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size:1em;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+    
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border:none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: white;
+    font-size: 1.2em;
+    line-height: 57px;
+
+}
+.remember-forgot{
+    margin: 0 -3px 0 3px;
+    padding: 0 35px 0 10px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    margin: right 3px;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: white;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 30px; 
+    background: rgda(255,255,255,0.10);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgb(20, 19, 19);
+    font-weight: 500;
+text-align: center;
+nav-down: 40px;
+
+}
+button:hover{
+    background: linear-gradient(90deg,#08ff08,#50e3fc,#bc13fe,#03a9f4,#0ff0fc);
+    background-size: 500%;
+    z-index: 1;
+    animation: blink 7s linear infinite;
+}
+@keyframes blink{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: 500%;
+    }
+}
+   button::after{
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    background: inherit;
+    border-radius: 40px;
+    backdrop-filter: blur(100px);
+    opacity: 0;
+   }
+   button:hover::after{
+    opacity: 1;
+    z-index: -1;
+   }
+
+.register-link{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register-link p a{
+    color: white;
+    text-decoration:none ;
+    font-weight: 600;
+
+}
+.register-link p a:hover{
+    text-decoration: underline;
+
+}
+@media(max-width: 360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+    
+
+    }
+    .input-box{
+        width: 290px;
+    }
+}
+
+.login-box::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: right bottom;
+    animation: animate 6s linear infinite;
+    
+
+}
+.login-box::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0 deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: right bottom;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+   100%{
+transform: rotate(360deg);
+}
+}
+
+
+

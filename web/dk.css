@@ -1,0 +1,53 @@
+*
+    
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+body{
+    
+    min-height: 100vh;
+    background: #23242a;
+    overflow: hidden;
+}
+.login-box.login-box{
+    overflow: hidden;
+}
+.login-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 350px;
+    height: 450px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+   .login-box::before{
+    content: "center";
+    position: absolute;
+    top: -50px;
+    left: -50%;
+    width: 250px;
+    height: 350px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    z-index: 1;
+    animation: animate 6s linear infinite;
+   }
+   @keyframes animate
+{
+    0%{
+transform: rotate(0deg)}
+100%{
+transform: rotate(360deg);
+}
+}
+
+
